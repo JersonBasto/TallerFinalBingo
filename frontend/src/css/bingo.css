@@ -1,0 +1,126 @@
+#containerBingo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 5px;
+}
+
+#carton {
+    border: 5px solid;
+    padding: 10px;
+    background: rgb(105, 19, 19);
+    border-color: rgb(241, 234, 234);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px;
+    gap: 20px;
+}
+
+#carton #bingo{
+    font-weight: 1000;
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(28, 183, 226);
+}
+
+#carton td {
+    border: 1px solid;
+    width: 50px;
+    font-size: 150%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 50%;
+    height: 50px;
+    padding: 5px;
+    background: white;
+    font-weight: 600;
+}
+
+#carton tr {
+    padding: 5px;
+}
+
+#balotas {
+    border: 1px solid;
+    padding: 10px;
+    background: rgb(227, 142, 51);
+    border: 10px solid;
+    border-color:rgb(58, 32, 5) ;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px;
+    gap: 20px;
+}
+
+#balotas td {
+    border: 1px solid;
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    padding: 5px;
+    background: white;
+    font-weight: 600;
+}
+
+#balotas #bingo{
+    background: rgb(29, 65, 209);
+}
+
+#welcome {
+    font-size: 140%;
+    font-weight: 600;
+}
+
+#startGame {
+    visibility: hidden;
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+    border-color: rgb(176, 39, 39);
+    color: black
+}
+
+#startGame:hover {
+    background: rgb(176, 39, 39);
+    color: white;
+}
+
+#numberBalota {
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 500%;
+    border: 2px solid;
+    border-color: black;
+    background-color: rgb(0, 53, 128);
+    color: white;
+}
+
+#winner {
+    padding: 10px;
+    background: white;
+    font-size: 100%;
+    font-weight: 600;
+    border-radius: 10px;
+    border-color: rgb(38, 38, 189);
+    background: rgb(38, 38, 189);
+    color: white;
+    transition: 0.5s;
+}
+
+#winner:hover {
+    background: rgb(27, 169, 27);
+    border-color: rgb(27, 169, 27);
+}
+
+#userInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+#roomStay{
+    font-size: 120%;
+    font-weight: 700;
+}
