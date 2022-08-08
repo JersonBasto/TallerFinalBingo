@@ -8,15 +8,15 @@ import { Card } from "react-bootstrap";
  */
 function Home() {
   return (
-    <Card className="text-center">
-      <Card.Header>Bienvenido</Card.Header>
-      <Card.Body>
-        <Card.Title>Taller BINGO</Card.Title>
-        <Card.Text>
+    <div className="text-center">
+      <h1>Bienvenido</h1>
+      <div>
+        <h3>Taller BINGO</h3>
+        <h4>
           Debera crear un usuario e iniciar sesion para acceder al juego.
-        </Card.Text>
-      </Card.Body>
-    </Card>
+        </h4>
+      </div>
+    </div>
   );
 }
 

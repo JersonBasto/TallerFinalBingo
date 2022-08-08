@@ -25,7 +25,6 @@ function Bingo() {
   var res;
   let clientRoom;
   let cardB = new cardBingo();
-  console.log(cardB.jsonCargBingo());
   /**
    * Mediante el socket.io emite una solictud al BackEnd para obtener los usuarios.
    *
@@ -41,6 +40,15 @@ function Bingo() {
    */
   const validar = async () => {
     res = await validateToken({ token: localStorage.getItem("token_user") });
+    if (res.validate) {
+      Swal.fire({
+        icon: "success",
+        title: res.mensaje,
+        text: res.firstName,
+      });
+    } else {
+      window.location.href = "/";
+    }
     getUsers(res);
     const welcome = document.getElementById("welcome");
     welcome.innerText = "Bienvenido " + res.username;
@@ -440,23 +448,21 @@ function Bingo() {
   /**
    * Envia la variable Room para emitir un mensaje a todos los integrantes del room en el bakcend
    * indicando que el juego inicia
-   * 
+   *
    * @author Jerson Daniel Basto Gil <jdbastog@correo.udistrital.edu.co>
    */
   const enviarRoom = () => {
-    console.log("Se hizo click");
     const startGame = document.getElementById("startGame");
     startGame.style.visibility = "hidden";
     socket.emit("initgame", clientRoom);
   };
   /**
    * Envia una solictud al BackEnd por medio de socket que determine si es el ganador.
-   * 
+   *
    * @author Jerson Daniel Basto Gil <jdbastog@correo.udistrital.edu.co>
    */
   const winner = async () => {
     var resCompare = await compareBingo(cardB.jsonCargBingo(), idBingo);
-    console.log(resCompare);
     if (resCompare) {
       socket.emit("endGame", clientRoom, socket.id);
     } else {

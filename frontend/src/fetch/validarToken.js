@@ -22,15 +22,6 @@ export const validateToken = async (token) => {
     }).then(async (response) => {
       if (response.ok) {
         resJson = await response.json();
-        if (resJson.validate) {
-          
-        } else {
-          Swal.fire({
-            icon: "error",
-            text: resJson.mensaje,
-          });
-          window.location.href = "./login";
-        }
       }
     });
   }
